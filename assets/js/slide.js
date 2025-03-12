@@ -60,11 +60,11 @@ class SlideBanner {
       slideElement.innerHTML = `
         <img src="${slide.image}" alt="${slide.title}">
         <div class="overlay">
-            <div class="content max-w-[calc(100%-48px)]">
-                <h2>${slide.title}</h2>
-                <div class="flex flex-col sm:flex-row sm:items-center gap-3 font-space-grotesk">
+            <div class="content max-w-[calc(100%-48px)] w-full text-center lg:w-[auto] lg:text-start left-1/2 -translate-x-1/2 lg:left-12 lg:-translate-x-0">
+                <h2 class="text-[88px] lg:text-[120px]">${slide.title}</h2>
+                <div class="flex flex-col items-center lg:flex-row gap-3 font-space-grotesk">
                     <p class="text-sm">${slide.description}</p>
-                    <button type="button" class="find-out-more-btn sm:ml-4">
+                    <button type="button" class="w-full lg:w-[auto] find-out-more-btn lg:ml-4">
                         <span>Find out more</span>
                     </button>
                 </div>
@@ -116,9 +116,9 @@ class SlideBanner {
   }
 
   startAutoSlide() {
-    this.intervalId = setInterval(() => {
-      this.goToNext();
-    }, 3000);
+    // this.intervalId = setInterval(() => {
+    //   this.goToNext();
+    // }, 3000);
   }
 
   stopAutoSlide() {
